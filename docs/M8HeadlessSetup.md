@@ -68,10 +68,12 @@ If you aren't using a brand new microSD card, it needs to be formatted correctly
 Next, you need to put the M8 firmware on your Teensy. To do this:
 1. Download the latest M8 Headless firmware. To do this:
    1. Visit https://github.com/DirtyWave/M8HeadlessFirmware/tree/main/Releases.
-   1. Click on the most recent M8_Vx_x_x_HEADLESS.hex file.
-   1. Right click on the View raw link, and click Save link as... (or the similarly-named option in your browser). Save the .hex file on your computer.
+   1. Click on the most recent **M8_Vx_x_x_HEADLESS.hex** file.
+   1. **Right click** on the **View raw** link, and click **Save link as...** (or the similarly-named option in your browser). Save the .hex file on your computer.
    
       ⚠ **Make sure you are right clicking the "View raw" link and saving it instead of clicking the Download button. The Download button won't download the file correctly.**
+      
+      ![](./images/download_firmware.png)
 1. If you own an M8 or other Teensy devices, unplug them from your computer.
 1. Plug in your microUSB cable to your Teensy device, and plug the other end **directly** into your computer.
 
@@ -87,16 +89,22 @@ Finally, we need to install the M8 TouchDesigner app that lets your computer com
 1. Download the latest M8 TouchDesigner app. To do this:
    1. Visit [https://github.com/DirtyWave/M8DisplayTouchdesigner](https://github.com/DirtyWave/M8DisplayTouchdesigner).
    1. Click the green **Code** button, then click **Download ZIP**.
+   
+      ![](./images/download_touchdesigner.png)
    1. Unzip the file you downloaded on to your computer.
 1. Plug in your microSD card into your Teensy device. The Teensy microSD card slot isn't spring-loaded, so make sure the card is inserted all the way.
 1. Plug your Teensy **directly** into your computer using a microUSB cable. **Do not use a USB hub.**
 1. (Optional) Plug in your numpad or gamepad, if you're using one. It's okay to plug it in to a USB hub.
 1. Open the **M8DisplayTouchdesigner** folder from the ZIP you extracted earlier.
 1. Open **M8DisplayTouchdesigner.toe**. TouchDesigner will load, and you should see a window with diagonal pink lines.
+
+   ![](./images/diagonal_lines.png)
 1. Click **Connection & Settings** at the bottom of the window.
 1. Click the **Serial Port** dropdown.
    - **Windows:** You'll see 1 or more numbered COM ports. Select each one until the pink lines are replaced with the M8 screen.
-   - **Mac OS:** Select the port named **usbmodem**.
+   - **Mac OS:** Select the port named **usbmodem**. The pink lines should be replaced with the M8 screen.
+   
+   ![](./images/touchdesigner_config.png)
 1. (Optional) In the Connection & Settings screen, configure the keys used for the various M8 buttons to map them to keys on your keyboard or numpad. If you're using a gamepad, you'll need some way to map its buttons to keyboard keys.
 
 ## Step 4: Set Up M8 Input Audio Monitoring
@@ -106,9 +114,15 @@ In order to hear the audio from the M8 Teensy, you need to enable monitoring of 
 The simplest way to monitor the M8 Input device is to do the following:
 
 1. Right click on the 🔊 sound icon in the system tray and click **Sounds**.
+
+   ![](./images/windows_taskbar_sounds.png)
 1. Switch to the Recording tab. Find the M8 device in the list, select it, and click Properties.
+
+   ![](./images/windows_sound_setup_1.png)
 1. Switch to the Listen tab. Check the Listen to this device box. Click OK.
 
+   ![](./images/windows_sound_setup_2.png)
+   
 ### Mac OS
 There are multiple options for Mac OS:
 1. **Use Quicktime Player** (free, but there may be audio lag):
@@ -121,8 +135,12 @@ There are multiple options for Mac OS:
    1. Open Audacity.
    1. Open Audacity's **Preferences** menu.
    1. Select the **Recording** section on the left. Check the **Software playthrough of input** box.
+   
+      ![](./images/mac_audacity_prefs.png)
    1. Exit the Preferences menu.
    1. Select **M8** as your microphone input, then click on the text that says **Click to Start Monitoring**. You should now hear M8's input through your speakers.
+   
+      ![](./images/mac_audacity_setup.png)
 1. **Use Audio Hijack** (works, but costs $59 USD):
    1. You can purchase Audio Hijack here: [https://rogueamoeba.com/audiohijack/](https://rogueamoeba.com/audiohijack/)
 1. **Use OBS Studio** (free, but overkill):
@@ -144,10 +162,11 @@ To add or remove files from the microSD card, do the following:
 
 # Troubleshooting
 ## Problem: TyUpdater says "IHEX parse error" when trying to install the M8 Firmware
+![](./images/invalid_firmware.png)
+
 This happens when the M8 Firmware was downloaded incorrectly. To solve this, carefully repeat **Step 2 (Install M8 Headless Firmware)** in the Installation Steps.
 
 ## Problem: None of the Serial Port options in TouchDesigner work
-
 ### I still only see the screen with pink diagonal lines
 This happens when TouchDesigner can't see your Teensy device, if the firmware was not correctly installed, or if the microSD card is not detected. To solve this:
 1. Make sure your Teensy is plugged in **directly** to your computer and not with a USB hub.
@@ -168,12 +187,33 @@ This happens when the M8 Teensy can't see your microSD card. To solve this, foll
 This happens when the M8 Teensy can't see your microSD card. To solve this, follow the steps in the **Updating Content on microSD Card** section.
 
 ## Problem: I updated the M8 firmware, and now the TouchDesigner app looks like this:
+![](./images/outdated_touchdesigner.png)
+
 This happens when the M8 TouchDesigner app is out-of-date. To solve this, you need to update the M8 TouchDesigner app. Repeat **Step 3 (Install M8 TouchDesigner and Run M8 Headless)** in the Installation Steps.
 
 ## Problem: I pressed Escape and I'm stuck on a strange screen:
+![](./images/touchdesigner_wiring.png)
+
 To solve this, press F1 to return to the M8 screen.
 
 ## Problem: I hit the white button on the Teensy and now the TocuhDesigner app is frozen
 Pressing the white button on the Teensy resets the device. To solve this:
 1. Unplug the USB cable from the Teensy, then plug it back in.
 1. Close the M8 TouchDesigner app, then reopen it.
+
+## Problem: I see a black screen with blue rectangles after selecting the Serial Port in TouchDesigner
+![](./images/mac_gpu_issue.png)
+
+This is a known issue with Mac computers with GPUs. To solve this:
+1. From the black screen with the blue rectangles within the M8 TouchDesigner app, press **Escape**. You should see a complicated screen with lots of boxes.
+1. Double click the box labeled **M8Display**.
+
+   ![](./images/mac_gpu_fix_1.png)
+1. You should now see a much more complicated screen. Right click on some empty space on the screen (not over one of the boxes) and select **Find operator...**
+1. In the Find box that appears on the top left, enter **text1**.
+
+   ![](./images/mac_gpu_fix_2.png)
+1. On the right side of the screen, you should see some configuration options. Change **Display Method* to **Bitmap**.
+
+   ![](./images/mac_gpu_fix_3.png)
+1. Press F1 to return to the main screen. You should see the M8 interface now.
