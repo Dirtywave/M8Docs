@@ -200,3 +200,6 @@ To solve this, press F1 to return to the M8 screen.
 Pressing the white button on the Teensy resets the device. To solve this:
 1. Unplug the USB cable from the Teensy, then plug it back in.
 1. Close the M8 TouchDesigner app, then reopen it.
+
+# Still Need Help?
+Join us on Discord! https://discord.gg/7SVuZe9
