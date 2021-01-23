@@ -201,19 +201,5 @@ Pressing the white button on the Teensy resets the device. To solve this:
 1. Unplug the USB cable from the Teensy, then plug it back in.
 1. Close the M8 TouchDesigner app, then reopen it.
 
-## Problem: I see a black screen with blue rectangles after selecting the Serial Port in TouchDesigner
-![](./images/mac_gpu_issue.png)
-
-This is a known issue with Mac computers with GPUs. To solve this:
-1. From the black screen with the blue rectangles within the M8 TouchDesigner app, press **Escape**. You should see a complicated screen with lots of boxes.
-1. Double click the box labeled **M8Display**.
-
-   ![](./images/mac_gpu_fix_1.png)
-1. You should now see a much more complicated screen. Right click on some empty space on the screen (not over one of the boxes) and select **Find operator...**
-1. In the Find box that appears on the top left, enter **text1**.
-
-   ![](./images/mac_gpu_fix_2.png)
-1. On the right side of the screen, you should see some configuration options. Change **Display Method* to **Bitmap**.
-
-   ![](./images/mac_gpu_fix_3.png)
-1. Press F1 to return to the main screen. You should see the M8 interface now.
+# Still Need Help?
+Join us on Discord! https://discord.gg/7SVuZe9
