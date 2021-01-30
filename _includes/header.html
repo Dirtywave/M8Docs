@@ -8,7 +8,7 @@
             <li><a class="navlink" href="https://dirtywave.com/M8/M8QuickStartGuide_v00.pdf">Quick-Start Guide</a></li>
           {% for doc in site.data.nav.gettingstarted %}
             {% assign p = site.pages | where: "url", doc.link | first %}
-            <li><a class="navlink" href="{{ p.url }}">{{ p.title }}</a></li>
+            <li><a class="navlink" href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -19,7 +19,7 @@
           <li><a class="navlink">Coming soon!</a></li>
           {% for doc in site.data.nav.learnm8 %}
             {% assign p = site.pages | where: "url", doc.link | first %}
-            <li><a class="navlink" href="{{ p.url }}">{{ p.title }}</a></li>
+            <li><a class="navlink" href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -30,7 +30,7 @@
           <li><a class="navlink">Coming soon!</a></li>
           {% for doc in site.data.nav.developers %}
             {% assign p = site.pages | where: "url", doc.link | first %}
-            <li><a class="navlink" href="{{ p.url }}">{{ p.title }}</a></li>
+            <li><a class="navlink" href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
