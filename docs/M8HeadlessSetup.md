@@ -88,7 +88,7 @@ Next, you need to put the M8 firmware on your Teensy. To do this:
       {: .note .warning}   
       **Make sure you are right clicking the "View raw" link and saving it instead of clicking the Download button. The Download button won't download the file correctly.**
       
-      ![](/assets/images/download_firmware.png)
+      ![](/M8Docs/assets/images/download_firmware.png)
 1. If you own an M8 or other Teensy devices, unplug them from your computer.
 1. Plug in your microUSB cable to your Teensy device, and plug the other end **directly** into your computer.
 
@@ -106,7 +106,7 @@ Finally, we need to install the M8 TouchDesigner app that lets your computer com
    1. Visit [https://github.com/DirtyWave/M8DisplayTouchdesigner](https://github.com/DirtyWave/M8DisplayTouchdesigner).
    1. Click the green **Code** button, then click **Download ZIP**.
    
-      ![](/assets/images/download_touchdesigner.png)
+      ![](/M8Docs/assets/images/download_touchdesigner.png)
    1. Unzip the file you downloaded on to your computer.
 1. Plug in your microSD card into your Teensy device. The Teensy microSD card slot isn't spring-loaded, so make sure the card is inserted all the way.
 1. Plug your Teensy **directly** into your computer using a microUSB cable. **Do not use a USB hub.**
@@ -114,13 +114,13 @@ Finally, we need to install the M8 TouchDesigner app that lets your computer com
 1. Open the **M8DisplayTouchdesigner** folder from the ZIP you extracted earlier.
 1. Open **M8DisplayTouchdesigner.toe**. TouchDesigner will load, and you should see a window with diagonal pink lines.
 
-   ![](/assets/images/diagonal_lines.png)
+   ![](/M8Docs/assets/images/diagonal_lines.png)
 1. Click **Connection & Settings** at the bottom of the window.
 1. Click the **Serial Port** dropdown.
    - **Windows:** You'll see 1 or more numbered COM ports. Select each one until the pink lines are replaced with the M8 screen.
    - **Mac OS:** Select the port named **usbmodem**. The pink lines should be replaced with the M8 screen.
    
-   ![](/assets/images/touchdesigner_config.png)
+   ![](/M8Docs/assets/images/touchdesigner_config.png)
 1. (Optional) In the Connection & Settings screen, configure the keys used for the various M8 buttons to map them to keys on your keyboard or numpad. If you're using a gamepad, you'll need some way to map its buttons to keyboard keys.
 
 ## Step 4: Set Up M8 Input Audio Monitoring
@@ -131,13 +131,13 @@ The simplest way to monitor the M8 Input device is to do the following:
 
 1. Right click on the 🔊 sound icon in the system tray and click **Sounds**.
 
-   ![](/assets/images/windows_taskbar_sounds.png)
+   ![](/M8Docs/assets/images/windows_taskbar_sounds.png)
 1. Switch to the Recording tab. Find the M8 device in the list, select it, and click Properties.
 
-   ![](/assets/images/windows_sound_setup_1.png)
+   ![](/M8Docs/assets/images/windows_sound_setup_1.png)
 1. Switch to the Listen tab. Check the Listen to this device box. Click OK.
 
-   ![](/assets/images/windows_sound_setup_2.png)
+   ![](/M8Docs/assets/images/windows_sound_setup_2.png)
    
 ### Mac OS
 There are multiple options for Mac OS:
@@ -152,11 +152,11 @@ There are multiple options for Mac OS:
    1. Open Audacity's **Preferences** menu.
    1. Select the **Recording** section on the left. Check the **Software playthrough of input** box.
    
-      ![](/assets/images/mac_audacity_prefs.png)
+      ![](/M8Docs/assets/images/mac_audacity_prefs.png)
    1. Exit the Preferences menu.
    1. Select **M8** as your microphone input, then click on the text that says **Click to Start Monitoring**. You should now hear M8's input through your speakers.
    
-      ![](/assets/images/mac_audacity_setup.png)
+      ![](/M8Docs/assets/images/mac_audacity_setup.png)
 1. **Use Audio Hijack** (works, but costs $59 USD):
    1. You can purchase Audio Hijack here: [https://rogueamoeba.com/audiohijack/](https://rogueamoeba.com/audiohijack/)
 1. **Use OBS Studio** (free, but overkill):
@@ -178,7 +178,7 @@ To add or remove files from the microSD card, do the following:
 
 # Troubleshooting
 ## Problem: TyUpdater says "IHEX parse error" when trying to install the M8 Firmware
-![](/assets/images/invalid_firmware.png)
+![](/M8Docs/assets/images/invalid_firmware.png)
 
 This happens when the M8 Firmware was downloaded incorrectly. To solve this, carefully repeat **Step 2 (Install M8 Headless Firmware)** in the Installation Steps.
 
@@ -203,12 +203,12 @@ This happens when the M8 Teensy can't see your microSD card. To solve this, foll
 This happens when the M8 Teensy can't see your microSD card. To solve this, follow the steps in the **Updating Content on microSD Card** section.
 
 ## Problem: I updated the M8 firmware, and now the TouchDesigner app looks like this:
-![](/assets/images/outdated_touchdesigner.png)
+![](/M8Docs/assets/images/outdated_touchdesigner.png)
 
 This happens when the M8 TouchDesigner app is out-of-date. To solve this, you need to update the M8 TouchDesigner app. Repeat **Step 3 (Install M8 TouchDesigner and Run M8 Headless)** in the Installation Steps.
 
 ## Problem: I pressed Escape and I'm stuck on a strange screen:
-![](/assets/images/touchdesigner_wiring.png)
+![](/M8Docs/assets/images/touchdesigner_wiring.png)
 
 To solve this, press F1 to return to the M8 screen.
 
