@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
+    <link href="{{ "/assets/css/style.css" | relative_url }}" rel="stylesheet">
+    <script src="{{ "/assets/js/site.js" | relative_url }}""></script>
+  </head>
+  <body>
+    {% include header.html %}
+    <div class="container">
+      {{ content }}
+    </div>
+  </body>
+</html>
+

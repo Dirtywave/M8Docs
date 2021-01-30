@@ -1,0 +1,40 @@
+<header>
+  <a href="https://dirtywave.com" class="headerlogolink headerlogo"><image class="headerlogo" src="/assets/images/dirtywave.svg"></image></a>
+  <ul class="headerlist">
+    <li class="headerlistitem"><a class="navlink" href="/docs/Home/">Docs Home</a></li>
+    <li onclick="toggleNav('gettingstarted')" class="headerlistitem">Getting Started <small>▼</small>
+      <div id="nav_gettingstarted" class="navdropdown">
+        <ul class="navlist">
+            <li><a class="navlink" href="https://dirtywave.com/M8/M8QuickStartGuide_v00.pdf">Quick-Start Guide</a></li>
+          {% for doc in site.data.nav.gettingstarted %}
+            {% assign p = site.pages | where: "url", doc.link | first %}
+            <li><a class="navlink" href="{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+    <li onclick="toggleNav('learnm8')" class="headerlistitem">Learn M8 <small>▼</small>
+      <div id="nav_learnm8" class="navdropdown">
+        <ul class="navlist">
+          <li><a class="navlink">Coming soon!</a></li>
+          {% for doc in site.data.nav.learnm8 %}
+            {% assign p = site.pages | where: "url", doc.link | first %}
+            <li><a class="navlink" href="{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+    <li onclick="toggleNav('developers')" class="headerlistitem">Developers <small>▼</small>
+      <div id="nav_developers" class="navdropdown" >
+        <ul class="navlist">
+          <li><a class="navlink">Coming soon!</a></li>
+          {% for doc in site.data.nav.developers %}
+            {% assign p = site.pages | where: "url", doc.link | first %}
+            <li><a class="navlink" href="{{ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+  </ul>
+  
+</header>

@@ -1,0 +1,8 @@
+# The links here need to match the permalink values in each markdown file
+gettingstarted:
+  - link: /docs/M8HeadlessSetup/
+  - link: /docs/invalid/
+learnm8:
+  - Whats
+developers:
+  - Up
