@@ -147,7 +147,7 @@ There are multiple options for Mac OS:
    1. You can download OBS Studio here: [https://obsproject.com/](https://obsproject.com/)
    
 ## Step 5: Read the Manual
-You're done setting up M8 Headless! Check out the community [M8 Manual](https://www.notion.so/M8-manual-ae3cb262908840b4b834c7485d3d4fb6) to learn how to use it.
+You're done setting up M8 Headless! Check out the community [M8 Manual](https://www.notion.so/M8-manual-6d153aac1bbc45209fcaf51cfa53157e) to learn how to use it. You can also take a look at the additional [M8 Documentation](https://www.notion.so/dc3fe39bbc464879ac984f0a69cc61bf?v=fd554243d3fa43558901cf96984120b9) which includes tips & tricks, information on themes, instrument and song file formats.
 
 # Updating Content on microSD Card
 To add or remove files from the microSD card, do the following:
