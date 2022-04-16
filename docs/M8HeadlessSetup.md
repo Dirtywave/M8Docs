@@ -78,7 +78,7 @@ Next, you need to put the M8 firmware on your Teensy. To do this:
 1. Plug in your microUSB cable to your Teensy device, and plug the other end **directly** into your computer.
 
     ⚠ **Do not plug the USB cable into a USB hub, or you may run into problems!**
-1. Open the TyUpdater tool that was part of the TyTools installation you performed earlier. Another app called TyCommander was installed too, but that's not what you want.
+1. Open the TyUploader tool that was part of the TyTools installation you performed earlier. Another app called TyCommander was installed too, but that's not what you want.
 1. You should see your Teensy device in the dropdown list. It may be named something like "HalfKay," "Teensyduino," or "M8" if there is existing M8 firmware on the device. Make sure your device is selected.
 1. Click the Upload button.
 1. Select the .hex file you downloaded earlier.
@@ -161,7 +161,7 @@ To add or remove files from the microSD card, do the following:
 1. Select the appropriate Serial Port in the M8 TouchDesigner app, if necessary.
 
 # Troubleshooting
-## Problem: TyUpdater says "IHEX parse error" when trying to install the M8 Firmware
+## Problem: TyUploader says "IHEX parse error" when trying to install the M8 Firmware
 ![](./images/invalid_firmware.png)
 
 This happens when the M8 Firmware was downloaded incorrectly. To solve this, carefully repeat **Step 2 (Install M8 Headless Firmware)** in the Installation Steps.
@@ -175,7 +175,7 @@ This happens when TouchDesigner can't see your Teensy device, if the firmware wa
    1. Make sure the microSD card is inserted **all the way**.
    1. Reconnect the Teensy device, and reopen the M8 TouchDesigner app.
    1. Try the Serial Port options again.
-1. Make sure your Teensy shows up as **M8** in the TyUpdater app. If it doesn't, try flashing the firmware again by following **Step 2 (Install M8 Headless Firmware)** in the Installation Steps.
+1. Make sure your Teensy shows up as **M8** in the TyUploader app. If it doesn't, try flashing the firmware again by following **Step 2 (Install M8 Headless Firmware)** in the Installation Steps.
 
 ### I see a completely black screen
 This happens when incompatible firmware is used with the M8 TouchDesigner app. To solve this, carefully repeat **Step 2 (Install M8 Headless Firmware)** in the Installation Steps, ensuring that you are using the most recent version of the firmware.
