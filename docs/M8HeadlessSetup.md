@@ -78,7 +78,7 @@ Next, you need to put the M8 firmware on your Teensy. To do this:
 1. Plug in your microUSB cable to your Teensy device, and plug the other end **directly** into your computer.
 
     ⚠ **Do not plug the USB cable into a USB hub, or you may run into problems!**
-1. Open the TyUpdater tool that was part of the TyTools installation you performed earlier. Another app called TyCommander was installed too, but that's not what you want.
+1. Open the TyUploader tool that was part of the TyTools installation you performed earlier. Another app called TyCommander was installed too, but that's not what you want.
 1. You should see your Teensy device in the dropdown list. It may be named something like "HalfKay," "Teensyduino," or "M8" if there is existing M8 firmware on the device. Make sure your device is selected.
 1. Click the Upload button.
 1. Select the .hex file you downloaded earlier.
