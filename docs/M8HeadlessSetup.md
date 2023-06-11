@@ -21,10 +21,15 @@ There's a few pieces of software you need to install to set up M8 Headless:
       1. **For Mac OS:** Choose the most recent TyTools-x.x.x-osx.dmg file.
       1. **For Windows:** Choose the most recent TyTools-x.x.x-win64.msi file (or .zip, if you prefer).
    1. Install (or unzip) TyTools using the file you downloaded.
-1. **TouchDesigner:** This is used to communicate with the Teensy device and display the M8 interface on your screen. To install it:
-   1. Visit https://derivative.ca/download.
-   1. Download TouchDesigner for your operating system (Mac OS or Windows).
-   1. Install TouchDesigner using the file you downloaded.
+1. **M8 Display Client:** This is used to communicate with the Teensy device and display the M8 interface on your screen. There are several clients which can be used:
+   1. **M8WebDisplay**
+      1. Visit https://m8.run/ and follow the instructions.
+   1. **m8c**
+      1. Visit https://github.com/laamaa/m8c and follow the installation instructions.
+   1. **TouchDesigner**
+      1. Visit https://derivative.ca/download.
+      1. Download TouchDesigner for your operating system (Mac OS or Windows).
+      1. Install TouchDesigner using the file you downloaded.
 1. **SD Card Formatter:** You only need this if you are using an old microSD card **and** your card is 32GB or smaller. This is used to format your microSD card in a way that allows the Teensy device to properly use it. To install it:
    1. Visit https://www.sdcard.org/downloads/formatter/.
    1. Download the tool for your operating system (Mac OS or Windows).
@@ -84,8 +89,19 @@ Next, you need to put the M8 firmware on your Teensy. To do this:
 1. Select the .hex file you downloaded earlier.
 1. Wait for the process to complete. The device's name should change to **M8** in the dropdown.
 
-## Step 3: Install M8 TouchDesigner and Run M8 Headless
-Finally, we need to install the M8 TouchDesigner app that lets your computer communicate with the  M8 Teensy. To do this:
+## Step 3: Install a M8 Display Client and Run M8 Headless
+Finally, we need to install a M8 Display Client that lets your computer communicate with the  M8 Teensy. You have different options:
+
+### M8WebDisplay
+
+1. Visit https://m8.run/ and follow the instructions.
+
+### m8c
+
+1. Visit https://github.com/laamaa/m8c and follow the installation instructions.
+
+### M8 TouchDesigner
+
 1. Download the latest M8 TouchDesigner app. To do this:
    1. Visit [https://github.com/DirtyWave/M8DisplayTouchdesigner](https://github.com/DirtyWave/M8DisplayTouchdesigner).
    1. Click the green **Code** button, then click **Download ZIP**.
@@ -107,7 +123,7 @@ Finally, we need to install the M8 TouchDesigner app that lets your computer com
    ![](./images/touchdesigner_config.png)
 1. (Optional) In the Connection & Settings screen, configure the keys used for the various M8 buttons to map them to keys on your keyboard or numpad. If you're using a gamepad, you'll need some way to map its buttons to keyboard keys.
 
-## Step 4: Set Up M8 Input Audio Monitoring
+## Step 4: Set Up M8 Input Audio Monitoring (Only needed when using the M8 TouchDesigner)
 In order to hear the audio from the M8 Teensy, you need to enable monitoring of the M8 Input device on your computer. You can do this with any software that supports this (like a Digital Audio Workstation (DAW) such as Ableton Live), but some simple recommendations follow.
 
 ### Windows
@@ -151,14 +167,14 @@ You're done setting up M8 Headless! Check out the community [M8 Manual](https://
 
 # Updating Content on microSD Card
 To add or remove files from the microSD card, do the following:
-1. Close the M8 TouchDesigner app.
+1. Close the M8 Display client you are using.
 1. Unplug the Teensy device from your computer.
 1. Remove the microSD card.
 1. If you want to modify the files on the microSD card, plug it in to your computer, and update your files.
 1. Reinsert the microSD card into the Teensy device. The microSD card slot is not spring-loaded, so make sure it's inserted **all the way**.
 1. Reconnect the Teensy device to your computer.
-1. Reopen the M8 TouchDesigner app.
-1. Select the appropriate Serial Port in the M8 TouchDesigner app, if necessary.
+1. Reopen the M8 Display client you are using app.
+1. When using the M8 TouchDesigner, select the appropriate Serial Port, if necessary.
 
 # Troubleshooting
 ## Problem: TyUploader says "IHEX parse error" when trying to install the M8 Firmware
@@ -191,7 +207,7 @@ This happens when the M8 Teensy can't see your microSD card. To solve this, foll
 
 This happens when the M8 TouchDesigner app is out-of-date. To solve this, you need to update the M8 TouchDesigner app. Repeat **Step 3 (Install M8 TouchDesigner and Run M8 Headless)** in the Installation Steps.
 
-## Problem: I pressed Escape and I'm stuck on a strange screen:
+## Problem: I pressed Escape in the M8 TouchDesigner app and I'm stuck on a strange screen:
 ![](./images/touchdesigner_wiring.png)
 
 To solve this, press F1 to return to the M8 screen.
@@ -201,5 +217,12 @@ Pressing the white button on the Teensy resets the device. To solve this:
 1. Unplug the USB cable from the Teensy, then plug it back in.
 1. Close the M8 TouchDesigner app, then reopen it.
 
+## Problem: The other M8 display clients (Except M8 TouchDesigner), are causing issues.
+If you are experiencing issues with any other M8 display client, except the M8 TouchDesigner, feel free to contact the creator of the M8 display client you are using.
+
 # Still Need Help?
 Join us on Discord! https://discord.gg/7SVuZe9
+
+# A note about third party M8 display clients
+
+If you feel like your M8 display client should be mentioned here, feel free to open an issue and create a Pull Request.
