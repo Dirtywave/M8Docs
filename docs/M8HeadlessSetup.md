@@ -212,7 +212,7 @@ This happens when the M8 TouchDesigner app is out-of-date. To solve this, you ne
 
 To solve this, press F1 to return to the M8 screen.
 
-## Problem: I hit the white button on the Teensy and now the TocuhDesigner app is frozen
+## Problem: I hit the white button on the Teensy and now the TouchDesigner app is frozen
 Pressing the white button on the Teensy resets the device. To solve this:
 1. Unplug the USB cable from the Teensy, then plug it back in.
 1. Close the M8 TouchDesigner app, then reopen it.
